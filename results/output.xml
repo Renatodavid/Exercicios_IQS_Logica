@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-07T10:29:54.487069" rpa="false" schemaversion="5">
+<suite id="s1" name="Aula2" source="C:\projetos\FEST\aulaHercules\aula2.robot">
+<test id="s1-t1" name="teste2" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-07T10:29:55.120706" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-07T10:29:55.117710" elapsed="4.514053"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-07T10:29:59.633761" elapsed="0.260048"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T10:29:59.895808" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T10:29:59.894809" elapsed="0.433883"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-07T10:30:00.331690" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T10:30:00.330691" elapsed="0.230086"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-07T10:30:00.563776" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-07T10:30:00.562776" elapsed="1.008392"/>
+</kw>
+<status status="PASS" start="2024-02-07T10:29:55.113712" elapsed="6.458454"/>
+</test>
+<status status="PASS" start="2024-02-07T10:29:54.496063" elapsed="7.079102"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Aula2">Aula2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
