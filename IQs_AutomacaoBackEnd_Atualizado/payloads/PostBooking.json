@@ -1,0 +1,11 @@
+{
+  "firstname": "Felipe",
+  "lastname": "Sutter",
+  "totalprice": 100,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2024-03-01",
+    "checkout": "2024-03-02"
+  },
+  "additionalneeds": "Sem exercícios"
+}

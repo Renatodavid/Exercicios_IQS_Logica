@@ -7,15 +7,15 @@ Test Setup    Run Keywords
 
 
 *** Variables ***
-${URL}    http://sistemas.t2mlab.com:3009/
+${URL}    https://moodle.ifrs.edu.br/login/index.php
 ${BROWSER}    chrome
-${USUARIO_VALIDO}    BLCarvalho
-${SENHA}    123
+${USUARIO_VALIDO}    renatodavid811
+${SENHA}    sff1jsff1j@R
 
 &{LOGIN_PAGE}
-...    UsernameInput=id:formBasicEmail
-...    PasswordInput=id:formBasicPassword
-...    LoginButton=css:button[role]
+...    UsernameInput=id:username
+...    PasswordInput=id:password
+...    LoginButton=id:loginbtn
 
 
 *** Keywords ***
@@ -23,12 +23,12 @@ ${SENHA}    123
 Realizar login com ${username} e ${password}
     Input Text    ${LOGIN_PAGE.UsernameInput}    ${username}
     Input Text    ${LOGIN_PAGE.PasswordInput}    ${password}
-    Click Element    ${LOGIN_PAGE.LoginButton}
+    Click Element    ${LOGIN_PAGE.loginbtn}
 
 
 *** Test Cases ***
 TC001 - Colaborador conseguir entrar no Sistema de Comunidade Prática
     Realizar Login com ${USUARIO_VALIDO} e ${SENHA}
-    Wait Until Element Is Visible    css:button.MuiButtonBase-root.MuiCardActionArea-root.css-1m5f78l
-    Click Element    xpath://*[contains(text(), 'Sistema Comunidade Prática')]    
+   # Wait Until Element Is Visible    css:button.MuiButtonBase-root.MuiCardActionArea-root.css-1m5f78l
+    #Click Element    xpath://*[contains(text(), 'Sistema Comunidade Prática')]    
 

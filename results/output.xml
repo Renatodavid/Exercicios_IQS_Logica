@@ -1,73 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-07T20:52:18.976313" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-09T10:42:21.491681" rpa="false" schemaversion="5">
 <suite id="s1" name="FEST" source="C:\projetos\FEST">
-<suite id="s1-s1" name="Automacao-Robot" source="C:\projetos\FEST\automacao-robot">
-<suite id="s1-s1-s1" name="Automacao" source="C:\projetos\FEST\automacao-robot\automacao">
-<suite id="s1-s1-s1-s1" name="Teste" source="C:\projetos\FEST\automacao-robot\automacao\teste.robot">
-<test id="s1-s1-s1-s1-t1" name="TC001 - Colaborador conseguir entrar no Sistema de Comunidade Prática" line="30">
-<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<suite id="s1-s1" name="aulaHercules" source="C:\projetos\FEST\aulaHercules">
+<suite id="s1-s1-s1" name="Aula3" source="C:\projetos\FEST\aulaHercules\aula3.robot">
+<test id="s1-s1-s1-t1" name="teste3" line="22">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-07T20:52:21.804246" level="INFO">Opening browser 'chrome' to base url 'http://sistemas.t2mlab.com:3009/'.</msg>
+<msg time="2024-02-09T10:42:22.331201" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/'.</msg>
 <arg>url=${URL}</arg>
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-07T20:52:21.803250" elapsed="14.597113"/>
+<status status="PASS" start="2024-02-09T10:42:22.326204" elapsed="8.350255"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-07T20:52:36.401362" elapsed="0.913272"/>
+<status status="PASS" start="2024-02-09T10:42:30.752417" elapsed="0.408090"/>
 </kw>
-<arg>Open Browser</arg>
-<arg>url=${URL}</arg>
-<arg>browser=${BROWSER}</arg>
-<arg>AND</arg>
-<arg>Maximize Browser Window</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2024-02-07T20:52:21.801249" elapsed="15.513385"/>
-</kw>
-<kw name="Realizar Login com ${USUARIO_VALIDO} e ${SENHA}" source_name="Realizar login com ${username} e ${password}">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T20:52:37.328628" level="INFO">Typing text 'BLCarvalho' into text field 'id:formBasicEmail'.</msg>
+<msg time="2024-02-09T10:42:31.172504" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
 <arg>${LOGIN_PAGE.UsernameInput}</arg>
-<arg>${username}</arg>
+<arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T20:52:37.319633" elapsed="1.455445"/>
+<status status="PASS" start="2024-02-09T10:42:31.167508" elapsed="0.974301"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-07T20:52:38.780079" level="INFO">Typing text '123' into text field 'id:formBasicPassword'.</msg>
-<arg>${LOGIN_PAGE.PasswordInput}</arg>
-<arg>${password}</arg>
+<msg time="2024-02-09T10:42:32.183785" level="INFO">Typing text 'secret_sauce' into text field 'xpath://input[@name='password']'.</msg>
+<arg>${LOGIN_PAGE.PassowordInput}</arg>
+<arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T20:52:38.777083" elapsed="0.443354"/>
+<status status="PASS" start="2024-02-09T10:42:32.181789" elapsed="0.601963"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T20:52:39.222435" level="INFO">Clicking element 'css:button[role]'.</msg>
+<msg time="2024-02-09T10:42:32.787765" level="INFO">Clicking element 'css:[class=btn_action]'.</msg>
 <arg>${LOGIN_PAGE.LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T20:52:39.221435" elapsed="0.617377"/>
+<status status="PASS" start="2024-02-09T10:42:32.784751" elapsed="3.173835"/>
 </kw>
-<status status="PASS" start="2024-02-07T20:52:37.317630" elapsed="2.522182"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-09T10:42:35.965580" elapsed="6.144697"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:button.MuiButtonBase-root.MuiCardActionArea-root.css-1m5f78l</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-07T20:52:39.899779" elapsed="1.430946"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-07T20:52:41.332724" level="INFO">Clicking element 'xpath://*[contains(text(), 'Sistema Comunidade Prática')]'.</msg>
-<arg>xpath://*[contains(text(), 'Sistema Comunidade Prática')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-07T20:52:41.331726" elapsed="0.390817"/>
-</kw>
-<status status="PASS" start="2024-02-07T20:52:21.790255" elapsed="19.966332"/>
+<status status="PASS" start="2024-02-09T10:42:22.321208" elapsed="19.852034"/>
 </test>
-<status status="PASS" start="2024-02-07T20:52:19.909452" elapsed="21.964113"/>
+<status status="PASS" start="2024-02-09T10:42:21.604622" elapsed="20.576616"/>
 </suite>
-<status status="PASS" start="2024-02-07T20:52:19.902454" elapsed="22.664703"/>
+<status status="PASS" start="2024-02-09T10:42:21.589625" elapsed="21.068854"/>
 </suite>
-<status status="PASS" start="2024-02-07T20:52:19.766377" elapsed="22.846754"/>
-</suite>
-<status status="PASS" start="2024-02-07T20:52:19.123229" elapsed="23.498897"/>
+<status status="PASS" start="2024-02-09T10:42:21.509671" elapsed="21.157803"/>
 </suite>
 <statistics>
 <total>
@@ -77,9 +55,8 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="FEST">FEST</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Automacao-Robot">FEST.Automacao-Robot</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Automacao">FEST.Automacao-Robot.Automacao</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Teste">FEST.Automacao-Robot.Automacao.Teste</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="aulaHercules">FEST.aulaHercules</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Aula3">FEST.aulaHercules.Aula3</stat>
 </suite>
 </statistics>
 <errors>
