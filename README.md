@@ -1,4 +1,4 @@
-# README - Utilizando o Robot Framework
+# Utilizando o Robot Framework
 
 Este documento fornece uma introdução básica sobre como começar a utilizar o Robot Framework, uma estrutura de automação de teste de código aberto que utiliza uma linguagem de domínio específico fácil de ler.
 
